@@ -1,6 +1,6 @@
 import React  from 'react';
 import './App.css';
-import ToDoList from './components/TodoComponents/TodoList';
+import TodoList from './components/TodoComponents/TodoList';
 //import SearchComponent from './components/TodoComponents/SearchComponent';
 let generateId = Date.now();
 const TodoItems = [
@@ -27,19 +27,30 @@ const TodoItems = [
 ];
 
 class App extends React.Component {
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
   constructor(){
     super();
-    this.state ={};
+    this.state ={
+      list: TodoItems,
+      shownList: TodoItems,
+      addingTask: '',
+      id: '',
+      completed: '',
+      searchText: ''
+    };
   }
-  submitForm(e){
-    e.preventDefault();
-  }
+  submitForm = event =>{
+    event.preventDefault();
+    this.setState({
+      list: [...this.state.list,
+        { task : this.state.addingTask, id: generateId, completed: false}
+      ],
+      addingTask: ''
+    });
+  };
+
   render() {
     return (
-      <div class= 'container'>
+      <div className= 'container'>
         <h2>Welcome to your Todo App!</h2>
       </div>
     );

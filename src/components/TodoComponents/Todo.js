@@ -17,4 +17,4 @@
         </div>      
      );
  }
- export default ToDo;
+ export default Todo;

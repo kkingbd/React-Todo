@@ -21,4 +21,4 @@ const TodoForm = props =>{
     );
 }
 
-export default ToDoForm;
+export default TodoForm;
