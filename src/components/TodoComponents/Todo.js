@@ -9,7 +9,7 @@ const Todo = props => {
           <div
             className="item-container"
             key={item.id}
-             onClick={() => props.toggleCompleted(item.task)}
+            onClick={() => props.toggleCompleted(item.task)}
           >
             <p className={item.completed.toString()}>{item.task}</p>
           </div>
