@@ -13,10 +13,10 @@ const TodoList = props =>{
             <Todo list ={props.list} toggleCompleted={props.toggleCompleted} />
             <TodoForm 
                 list={props.list}
-                handleChanges={props.handleChanges}
-                submitForm={props.submitForm}
-                addingTask={props.addingTask}
-                clearCompleted={props.clearCompleted}   
+                 handleChanges={props.handleChanges}
+                 submitForm={props.submitForm}
+                 addingTask={props.addingTask}
+                 clearCompleted={props.clearCompleted}   
             />
         </Fragment>
 
