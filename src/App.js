@@ -58,6 +58,7 @@ class App extends React.Component {
     });
   }
   handleChanges = event => {
+    event.preventDefault();
     this.setState({ [event.target.name]: event.target.value });
     if (this.state.completed.length > 0) {
       this.searchList(event.target.value);

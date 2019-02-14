@@ -31,3 +31,21 @@ button{
     border-radius: 10px;
     background: rgb(219, 116, 116);
   }
+  button:hover{
+    background: olive;
+    color: white;
+    font-size: 20px;
+  }
+  .input{
+    width :60%;
+    height: 30px;
+    border: none;
+    background: rgb(236, 229, 230);
+    text-align: center;
+    border-bottom: 1px solid rgb(223, 34, 34);
+    margin-top: 15px;
+  }
+  p{
+    font-family: 'inherit';
+    font-size: 20px;
+  }

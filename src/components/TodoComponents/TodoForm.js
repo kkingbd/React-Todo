@@ -6,6 +6,7 @@ const TodoForm = props =>{
         <div>
             <form onSubmit = {props.submitForm}>
                 <input
+                 className = 'input'
                    onChange={props.handleChanges} 
                     value={props.addingTask}
                     type="text"
