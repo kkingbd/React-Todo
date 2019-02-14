@@ -1,0 +1,16 @@
+.true{
+    text-decoration: line-through;
+}
+.clear-button {
+    margin: 20px 0 10px 0;
+    width: 80%;
+    color: rgb(230, 178, 178);
+    background: rgb(31, 28, 28);
+  }
+button{
+    margin-top: 20px;
+    width: 80%;
+    height: 30px;
+    color: white;
+    background: rgb(48, 14, 14);
+  }

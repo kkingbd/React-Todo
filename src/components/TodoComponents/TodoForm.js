@@ -6,11 +6,12 @@ const TodoForm = props =>{
         <div>
             <form onSubmit = {props.submitForm}>
                 <input
+                   onChange={props.handleChanges} 
                     value={props.addingTask}
                     type="text"
                     name="addingTask"
                     placeholder="...todo"
-                    onChange={props.handleChanges}      
+                         
                 />
                 <button> Add Todo </button>
 

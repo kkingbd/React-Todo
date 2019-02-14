@@ -34,7 +34,6 @@ class App extends React.Component {
       addingTask: '',
       id: '',
       completed: '',
-      searchText: ''
     };
   }
 
@@ -47,7 +46,8 @@ class App extends React.Component {
       addingTask: ''
     });
   };
-  clearCompleted = () =>{
+  clearCompleted = (e) =>{
+    e.preventDefault()
     this.setState(preState =>{
       const clearedList = preState.list.filter(
         todoItem => !todoItem.completed
@@ -59,20 +59,20 @@ class App extends React.Component {
   }
   handleChanges = event => {
     this.setState({ [event.target.name]: event.target.value });
-    if (this.state.searchText.length > 0) {
+    if (this.state.completed.length > 0) {
       this.searchList(event.target.value);
     }
   };
-  toggoleCompleted = todo =>{
-    this.setState(preState =>{
-      const updatedList = preState.list.map(todoItem => {
-        if (todoItem.todo ===todo){
-          todoItem.completed = !todoItem.completed;
+  toggleCompleted = task => {
+    this.setState(previousState => {
+      const updatedList = previousState.list.map(toDoItem => {
+        if (toDoItem.task === task) {
+          toDoItem.completed = !toDoItem.completed;
         }
-        return todoItem;
+        return toDoItem;
       });
-      return{
-        list : updatedList
+      return {
+        list: updatedList
       };
     });
   };
@@ -87,12 +87,10 @@ class App extends React.Component {
           handleChanges={this.handleChanges}
           submitForm={this.submitForm}
           toggleCompleted={this.toggleCompleted}
-          clearCompleted={this.clearCompleted}
-        
+          clearCompleted={this.clearCompleted}      
         />
       </div>
     );
   }
 }  
-
 export default App;
