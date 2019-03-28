@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+  }
+.container{
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid blue;
+    text-align: center;
+    padding: 5% 0;
+}
